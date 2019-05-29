@@ -26,15 +26,16 @@ body {
   align-items: center;
   /* margin: 0 -50px; */
   background: rgba(219, 210, 82, 0.363);
-  padding: 0 0 50px 0;
+  /* padding: 0 0 -50px 0; */
 }
 .main-header a {
   flex-basis: 200px;
   display: block;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 .acitve-page {
-  background: rgb(160, 126, 63);
+  background: rgba(160, 126, 63, 0.76);
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -47,7 +48,8 @@ h1 {
   font-weight: bold;
   color: beige;
   text-shadow: 0 0px 5px rgba(36, 34, 34, 0.59);
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  margin: 0 auto;
 }
 
 .adress {
@@ -92,12 +94,15 @@ main {
   background: rgb(228, 94, 210); */
 }
 main .content {
-  padding-top: 30px;
-  background: rgb(160, 126, 63);
+  background: rgba(160, 126, 63, 0.76);
 
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
+}
+.background {
+  padding-top: 50px;
+  background: rgba(219, 210, 82, 0.363);
 }
 .content-foto img {
   width: 600px;
@@ -125,30 +130,35 @@ footer {
   .flex-content {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    /* justify-content: space-around; */
     align-items: center;
     /* margin: 0 -50px; */
     background: rgba(219, 210, 82, 0.363);
-    /* padding: 0 0 50px 0; */
+    padding: 0 0 -50px 0;
   }
   .main-header a {
+    flex-basis: 100px;
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     max-width: 100px;
+    align-self: center;
   }
   h1 {
     /* margin: 0 auto; */
-    margin-left: 120px;
+    /* margin-left: 120px; */
     font-size: 20px;
-
+    flex-basis: 50px;
     font-weight: bold;
     color: beige;
+    /* align-self: center; */
     text-shadow: 0 0px 5px rgba(36, 34, 34, 0.59);
   }
   .adress {
     position: absolute;
     visibility: hidden;
+
+    align-self: center;
   }
   .acitve-page {
     text-shadow: 0px 0px 2px rgb(233, 205, 205);
@@ -160,9 +170,17 @@ footer {
     /* margin-top: 50px; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-
-    background: rgba(219, 210, 82, 0.363);
+    align-items: flex-start;
+    /* position: relative; */
+    flex-direction: column;
+    /* background: rgba(219, 210, 82, 0.952); */
+    background: rgba(160, 126, 63, 0.979);
     list-style-type: none;
+    position: absolute;
+    /* display: none; */
+  }
+  .main-navigation li {
+    padding: 5px;
+    /* line-height: 0px; */
   }
 }

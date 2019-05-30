@@ -9,13 +9,13 @@ li {
 }
 body {
   background-image: url(../imges/pattern_1335.png);
+  opacity: 0.9;
 }
 .wrap {
   max-width: 960px;
   margin: 0 auto;
-
-  /* height: inherit; */
 }
+
 .main-header {
   /* min-height: 150px;
   background: rgb(54, 109, 228); */
@@ -26,7 +26,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   /* margin: 0 -50px; */
-  background: rgba(219, 210, 82, 0.363);
+  /* background: rgba(219, 210, 82, 0.363); */
   /* padding: 0 0 -50px 0; */
 }
 .main-header a {
@@ -38,7 +38,7 @@ body {
 .main-header img {
   width: 100%;
 }
-h1 {
+.text-logo {
   font-size: 50px;
   flex-basis: 400px;
   font-weight: bold;
@@ -46,6 +46,16 @@ h1 {
   text-shadow: 0 0px 5px rgba(36, 34, 34, 0.59);
   /* flex-grow: 1; */
   margin: 0 auto;
+  position: relative;
+  /* display: flex; */
+}
+.text-logo::after {
+  content: "Тренаженый зал";
+  font-family: "Quantico", sans-serif;
+  font-size: 12px;
+  position: absolute;
+  left: 290px;
+  top: 0px;
 }
 
 .adress {
@@ -69,7 +79,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: flex-start;
   /* display: none; */
-  background: rgba(219, 210, 82, 0.363);
+  /* background: rgba(219, 210, 82, 0.363); */
   list-style-type: none;
 }
 .main-navigation li {
@@ -91,23 +101,36 @@ h1 {
   text-shadow: 0px 0px 2px rgb(233, 205, 205);
   /* border-bottom: 1px solid rgb(221, 219, 187); */
 }
-main {
-  /* min-height: 500px;
-  background: rgb(228, 94, 210); */
+.acitve-page > a {
+  opacity: 0.8;
+  text-shadow: 0px 0px 2px rgba(233, 154, 8, 0.76);
 }
-.content {
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
   /* background: rgba(160, 126, 63, 0.76); */
-  background: rgba(219, 210, 82, 0.363);
-  /* overflow: hidden; */
-  width: 100%;
-  box-sizing: border-box;
-}
-.content.background {
-  padding-top: 100px;
+  padding-top: 50px;
   background: rgba(160, 126, 63, 0.76);
+  /* overflow: hidden; */
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
 }
-.content-foto img {
-  width: 600px;
+
+.content-items {
+  padding: 10px;
+  margin-bottom: 10px;
+  flex-basis: 800px;
+  margin: 0 auto;
+  font-family: "Quantico", sans-serif;
+  color: aliceblue;
+  background: rgba(219, 210, 82, 0.363);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
+  text-shadow: 1px 1px 5px rgba(36, 34, 34, 0.59);
 }
 .box1 {
   width: 40%;
@@ -146,7 +169,7 @@ footer {
     max-width: 100px;
     align-self: center;
   }
-  h1 {
+  .text-logo {
     /* margin: 0 auto; */
     /* margin-left: 120px; */
     font-size: 20px;
@@ -155,6 +178,17 @@ footer {
     color: beige;
     /* align-self: center; */
     text-shadow: 0 0px 5px rgba(36, 34, 34, 0.59);
+    position: relative;
+  }
+
+  .text-logo::after {
+    content: "Тренаженый зал";
+    font-family: "Quantico", sans-serif;
+    font-size: 8px;
+    position: absolute;
+    left: 50px;
+    top: -5px;
+    text-shadow: 0 0px 5px rgba(36, 34, 34, 0.59);
   }
   .adress {
     position: absolute;
@@ -162,11 +196,7 @@ footer {
 
     align-self: center;
   }
-  .acitve-page {
-    text-shadow: 0px 0px 2px rgb(233, 205, 205);
-    /* border-bottom: 1px solid rgb(221, 219, 187); */
-    background: none;
-  }
+
   .menu .wrap {
     position: relative;
   }

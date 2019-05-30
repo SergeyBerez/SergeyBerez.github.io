@@ -132,7 +132,15 @@ footer {
 .cotial {
   min-height: 100px;
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 550px) {
+  .main-header {
+    /* background: rgba(219, 210, 82, 0.363); */
+  }
+  .wrap {
+    max-width: 350px;
+    margin: 0 auto;
+    /* outline: 1px solid rgb(247, 7, 7); */
+  }
   .flex-content {
     display: flex;
     flex-wrap: wrap;
@@ -141,6 +149,7 @@ footer {
     align-items: center;
     /* margin: 0 -50px; */
     background: rgba(219, 210, 82, 0.363);
+    /* background-image: url(../imges/pattern_1335.png); */
     padding: 0 0 -50px 0;
   }
   .main-header a {
@@ -171,12 +180,16 @@ footer {
     /* border-bottom: 1px solid rgb(221, 219, 187); */
     background: none;
   }
+  .menu {
+    /* background: rgba(219, 210, 82, 0.363); */
+  }
   .menu .wrap {
     position: relative;
   }
   .menu-hidden {
     display: block;
     background: rgba(219, 210, 82, 0.363);
+    /* background-image: url(../imges/pattern_1335.png); */
     color: aliceblue;
     font-size: 16px;
     cursor: pointer;
@@ -191,6 +204,7 @@ footer {
     flex-direction: column;
     border-radius: 5px;
     background: rgba(160, 126, 63, 0.993);
+    /* background-image: url(../imges/pattern_1335.png); */
     list-style-type: none;
     position: absolute;
     box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);

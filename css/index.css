@@ -23,7 +23,7 @@ body {
 .flex-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   /* margin: 0 -50px; */
   background: rgba(219, 210, 82, 0.363);
@@ -34,12 +34,7 @@ body {
   display: block;
   /* margin-right: 50px; */
 }
-.acitve-page {
-  /* background: rgba(160, 126, 63, 0.76); */
-  background: rgba(160, 126, 63, 0.76);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
+
 .main-header img {
   width: 100%;
 }
@@ -57,9 +52,8 @@ h1 {
   font-size: 14px;
 
   color: beige;
-  /* margin-bottom: auto; */
-  align-self: flex-start;
-
+  margin-bottom: auto;
+  margin-left: auto;
   /* order: 1; */
 }
 .menu-hidden {
@@ -134,7 +128,7 @@ footer {
 .cotial {
   min-height: 100px;
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 550px) {
   .flex-content {
     display: flex;
     flex-wrap: wrap;

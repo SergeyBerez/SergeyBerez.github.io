@@ -66,7 +66,9 @@ h1 {
   display: none;
   cursor: pointer;
 }
-
+#menu-tag {
+  display: none;
+}
 .main-navigation {
   /* margin-top: 50px; */
   display: flex;
@@ -178,23 +180,30 @@ footer {
     display: block;
     background: rgba(219, 210, 82, 0.363);
     color: aliceblue;
-    font-size: 16px;
+
     cursor: pointer;
+    width: inherit;
   }
 
   .main-navigation {
     display: flex;
-
+    opacity: 0;
+    /* height: 0px; */
     flex-wrap: wrap;
     align-items: flex-start;
-
+    transition: 0.5s;
     flex-direction: column;
     border-radius: 5px;
     background: rgba(160, 126, 63, 0.993);
     list-style-type: none;
     position: absolute;
+
     box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
-    display: none;
+  }
+  #menu-tag:checked ~ .main-navigation {
+    display: flex;
+    opacity: 1;
+    height: 200px;
   }
   .main-navigation li {
     padding: 5px;
@@ -206,5 +215,5 @@ footer {
   }
 }
 .show {
-  display: block;
+  display: flex;
 }

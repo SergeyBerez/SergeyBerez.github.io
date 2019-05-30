@@ -1,17 +1,18 @@
-var ul = document.querySelector(".main-navigation");
-var menu = document.querySelector(".menu-hidden");
+// var ul = document.querySelector(".main-navigation");
+// var menu = document.querySelector(".menu-hidden");
 // menu.addEventListener("click", function(e) {
 //   ul.classList.toggle("show");
-
-//   if (a == "visible") {
-//     console.log(1);
-//     ul.setAttribute("visibility", "hidden");
-//   } else {
-//     ul.setAttribute("visibility", "visible");
-//     console.log(2);
-//   }
 // });
-menu.onclick = function(e) {
-  ul.classList.toggle("show");
-  console.log(ul);
-};
+//menu.onclick = function(e) {
+// ul.classList.toggle("show");
+// console.log(ul);
+
+//console.log(ul);
+//};
+// $(".menu-hidden").on("click", function() {
+//   $(".main-navigation").slideToggle(300, function() {
+//     if ($(this).css("display") == "none") {
+//       $(this).removeAttr("style");
+//     }
+//   });
+// });

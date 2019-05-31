@@ -32,6 +32,7 @@ body {
 .main-header a {
   flex-basis: 200px;
   display: block;
+
   /* margin-right: 50px; */
 }
 
@@ -66,13 +67,16 @@ body {
   margin-left: auto;
   /* order: 1; */
 }
+/*  кнопку гамбургер div c тегом leble img--- */
 .menu-hidden {
   display: none;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
+/* скрываем тег инпута */
 #menu-tag {
   display: none;
 }
+/* ---------ul главная навигация -------- */
 .main-navigation {
   /* margin-top: 50px; */
   display: flex;
@@ -93,7 +97,7 @@ body {
   transition: 0.5s;
   /* display: block; */
   font-size: 18px;
-
+  font-family: "Quantico", sans-serif;
   /* background: rgb(150, 140, 140); */
 }
 
@@ -105,6 +109,7 @@ body {
   opacity: 0.8;
   text-shadow: 0px 0px 2px rgba(233, 154, 8, 0.76);
 }
+/* одинаковый стиль для всех страниц */
 .main-content {
   display: flex;
   flex-wrap: wrap;
@@ -119,7 +124,7 @@ body {
   box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
   margin-bottom: 30px;
 }
-
+/* стили после  main для главной страницы  */
 .content-items {
   padding: 10px;
   margin-bottom: 10px;
@@ -127,13 +132,13 @@ body {
   margin: 0 auto;
   font-family: "Quantico", sans-serif;
   color: aliceblue;
-  background: rgba(219, 210, 82, 0.363);
+  /* background: rgba(219, 210, 82, 0.363); */
   border-radius: 10px;
   text-align: center;
   box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
   text-shadow: 1px 1px 5px rgba(36, 34, 34, 0.59);
 }
-
+/* футер социальные иконки */
 .cotial-flex {
   display: flex;
   justify-content: space-around;
@@ -145,7 +150,40 @@ body {
   border-radius: 50px;
   height: 50px;
 }
-@media screen and (max-width: 550px) {
+
+/*стили для галереи*/
+
+.galery {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.foto {
+  flex-basis: 250px;
+
+  border-radius: 5px;
+  /* background-image: url(../imges/pattern_1335.png); */
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.5s;
+  box-shadow: 0px 0px 5px rgba(58, 56, 56, 0.39);
+  position: relative;
+}
+
+.foto img {
+  width: 100%;
+}
+.foto:hover {
+  transform: scale(1.2);
+}
+.foto span {
+  display: none;
+}
+
+@media screen and (max-width: 510px) {
+  /* ----стиль для главной навигации----- */
   .flex-content {
     display: flex;
     flex-wrap: wrap;
@@ -158,10 +196,10 @@ body {
   }
   .main-header a {
     flex-basis: 100px;
-    display: block;
+
     /* margin: 0 auto; */
     max-width: 100px;
-    align-self: center;
+    /* align-self: center; */
   }
   .text-logo {
     /* margin: 0 auto; */
@@ -193,18 +231,20 @@ body {
 
   .menu .wrap {
     position: relative;
+    /* background: red; */
   }
   .menu-hidden {
     display: block;
     /* background: rgba(219, 210, 82, 0.363); */
     color: aliceblue;
 
-    cursor: pointer;
+    /* cursor: pointer; */
     width: inherit;
   }
 
   .main-navigation {
     display: flex;
+
     opacity: 0;
     /* height: 0px; */
     flex-wrap: wrap;
@@ -212,8 +252,9 @@ body {
     transition: 0.5s;
     flex-direction: column;
     border-radius: 5px;
-    background: rgba(160, 126, 63, 0.993);
+    background: rgba(160, 126, 63, 0.959);
     list-style-type: none;
+    font-family: "Quantico", sans-serif;
     position: absolute;
 
     box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
@@ -221,7 +262,8 @@ body {
   #menu-tag:checked ~ .main-navigation {
     display: flex;
     opacity: 1;
-    height: 200px;
+    z-index: 100;
+    /* height: 150px; */
   }
   .main-navigation li {
     padding: 5px;
@@ -234,27 +276,31 @@ body {
   .main-content {
     padding-top: 0px;
   }
-}
-/*стили для галереи*/
+  /* крестик стиль для закрывания фото */
+  .foto span {
+    display: ;
 
-.galery {
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.foto {
-  flex-basis: 200px;
-  width: 30%;
-  background: grey;
-  box-sizing: border-box;
-  padding: 10px;
-
-  transition: 0.9s;
-}
-.foto img {
-  width: 100%;
-}
-.foto:hover {
-  transform: scale(1.2);
+    position: absolute;
+    top: -5px;
+    color: antiquewhite;
+    left: 110px;
+    cursor: pointer;
+  }
+  .foto:hover span {
+    display: block;
+  }
+  /* .foto span:hover {
+    display: block;
+    position: absolute;
+    top: -5px;
+    color: antiquewhite;
+    left: 110px;
+    cursor: pointer;
+  } */
+  .foto:hover {
+    transform: scale(1.2);
+  }
+  .foto {
+    flex-basis: 120px;
+  }
 }

@@ -16,3 +16,17 @@
 //     }
 //   });
 // });
+
+// for (let i = 0; i < document.querySelectorAll("a").length; i++) {
+//   document.querySelectorAll("a")[i].addEventListener("click", function(e) {
+//     e.preventDefault();
+//     // this.style.display = "none";
+//     console.log(this);
+//   });
+// }
+// document.addEventListener("click", function(e) {
+//   console.log(e.target.tagName);
+//   if (e.target.tagName) {
+//     e.target.style.display = "none";
+//   }
+// });

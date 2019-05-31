@@ -235,3 +235,26 @@ body {
     padding-top: 0px;
   }
 }
+/*стили для галереи*/
+
+.galery {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.foto {
+  flex-basis: 200px;
+  width: 30%;
+  background: grey;
+  box-sizing: border-box;
+  padding: 10px;
+
+  transition: 0.9s;
+}
+.foto img {
+  width: 100%;
+}
+.foto:hover {
+  transform: scale(1.2);
+}

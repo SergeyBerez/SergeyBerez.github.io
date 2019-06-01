@@ -126,7 +126,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   /* background: rgba(160, 126, 63, 0.76); */
-  padding: 50px;
+  padding: 20px;
   background: rgba(160, 126, 63, 0.76);
   /* overflow: hidden; */
   border-radius: 5px;

@@ -88,7 +88,9 @@ body {
 }
 .main-navigation li {
   padding: 20px;
-  /* height: 55px; */
+  transition: 0.5s;
+  position: relative;
+  top: 0px;
 }
 
 .main-navigation li a {
@@ -101,13 +103,21 @@ body {
   /* background: rgb(150, 140, 140); */
 }
 
-.main-navigation li :hover {
-  text-shadow: 0px 0px 2px rgb(233, 205, 205);
+.main-navigation li:hover {
+  position: relative;
+  top: -2px;
+  background: rgba(46, 45, 45, 0.185);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.541);
+  text-shadow: 0px 0px 1px rgb(252, 252, 252);
   /* border-bottom: 1px solid rgb(221, 219, 187); */
 }
-.acitve-page > a {
-  opacity: 0.8;
-  text-shadow: 0px 0px 2px rgba(233, 154, 8, 0.76);
+.acitve-page {
+  opacity: 1;
+  background: rgba(46, 45, 45, 0.185);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.541);
+  text-shadow: 0px 0px 1px rgb(253, 253, 253);
 }
 /* одинаковый стиль для всех страниц */
 .main-content {
@@ -116,13 +126,23 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   /* background: rgba(160, 126, 63, 0.76); */
-  padding-top: 50px;
+  padding: 50px;
   background: rgba(160, 126, 63, 0.76);
   /* overflow: hidden; */
-  border-radius: 10px;
+  border-radius: 5px;
   box-sizing: border-box;
   box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
   margin-bottom: 30px;
+}
+.map {
+  flex-basis: 800px;
+  min-height: 400px;
+  margin: 0 auto;
+  /* border: 1px transparent #000; */
+}
+.map iframe {
+  width: 100%;
+  height: 100%;
 }
 /* стили после  main для главной страницы  */
 .content-items {
@@ -139,19 +159,38 @@ body {
   text-shadow: 1px 1px 5px rgba(36, 34, 34, 0.59);
 }
 /* футер социальные иконки */
+footer .wrap {
+  background: rgba(46, 45, 45, 0.568);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
+}
+
 .cotial-flex {
+  padding: 20px;
   display: flex;
   justify-content: space-around;
   list-style-type: none;
 }
+.cotial {
+  text-align: right;
+}
+.adress-foter {
+  font-size: 14px;
 
-.cotial li {
+  color: beige;
+  padding-top: 20px;
+}
+.cotial-flex li {
   background: white;
   border-radius: 50px;
   height: 50px;
 }
-
-/*стили для галереи*/
+/* --------------------футер навигация ----- */
+.main-navigation.footer li:hover {
+  background: rgba(46, 45, 45, 0.568);
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
+}
 
 .galery {
   display: flex;
@@ -175,9 +214,7 @@ body {
 .foto img {
   width: 100%;
 }
-/* .foto:hover {
-  transform: scale(1.2);
-} */
+
 .foto span {
   display: none;
 }
@@ -273,22 +310,16 @@ body {
   .main-navigation li:hover {
     border-bottom: 1px solid rgb(221, 219, 187);
   }
-  .main-content {
-    padding-top: 0px;
-  }
+
   /* крестик стиль для закрывания фото */
   .foto span {
-    display: none;
-
     position: absolute;
     top: -5px;
     color: antiquewhite;
     left: 110px;
     cursor: pointer;
   }
-  .foto:hover span {
-    display: block;
-  }
+
   /* .foto span:hover {
     display: block;
     position: absolute;
@@ -298,9 +329,18 @@ body {
     cursor: pointer;
   } */
   .scale2 {
-    transform: scale(2);
+    z-index: 1;
+    display: block;
+
+    transform: scale(2.5);
   }
   .foto {
     flex-basis: 120px;
+  }
+
+  .adress-foter {
+    font-size: 10px;
+
+    color: beige;
   }
 }

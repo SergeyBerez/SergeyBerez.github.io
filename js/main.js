@@ -32,14 +32,19 @@
 // });
 var spans = document.querySelectorAll(".foto span");
 var fotos = document.querySelectorAll(".foto");
-console.log(fotos);
-for (let i = 0; i < spans.length; i++) {
-  spans[i].addEventListener("click", function(e) {
+var but = document.querySelector(".menu-hidden");
+for (let i = 0; i < fotos.length; i++) {
+  fotos[i].addEventListener("click", function(e) {
+    console.log(this);
     // fotos[i].style.transform = "scale(1)";
-    if (fotos[i].style.transform == "scale(1)") {
-      fotos[i].style.transform = "scale(1.2)";
-    } else {
-      fotos[i].style.transform = "scale(1)";
-    }
+    fotos[i].classList.toggle("scale2");
   });
 }
+
+//const element = spans[i];
+// but.addEventListener("click", function(e) {
+//   console.log(this);
+//   for (let i = 0; i < fotos.length; i++) {
+//     fotos[i].classList.remove("scale2");
+//   }
+// });

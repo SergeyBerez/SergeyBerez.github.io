@@ -175,9 +175,9 @@ body {
 .foto img {
   width: 100%;
 }
-.foto:hover {
+/* .foto:hover {
   transform: scale(1.2);
-}
+} */
 .foto span {
   display: none;
 }
@@ -278,7 +278,7 @@ body {
   }
   /* крестик стиль для закрывания фото */
   .foto span {
-    display: ;
+    display: none;
 
     position: absolute;
     top: -5px;
@@ -297,8 +297,8 @@ body {
     left: 110px;
     cursor: pointer;
   } */
-  .foto:hover {
-    transform: scale(1.2);
+  .scale2 {
+    transform: scale(2);
   }
   .foto {
     flex-basis: 120px;

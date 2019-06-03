@@ -70,7 +70,8 @@ body {
 }
 /*  кнопку гамбургер div c тегом leble img--- */
 .menu-hidden {
-  display: none;
+  opacity: 0;
+  transition: opacity 0.5s;
   /* cursor: pointer; */
 }
 /* скрываем тег инпута */
@@ -272,7 +273,8 @@ footer .wrap {
     /* background: red; */
   }
   .menu-hidden {
-    display: block;
+    transition: 0.5s;
+    opacity: 1;
     /* background: rgba(219, 210, 82, 0.363); */
     color: aliceblue;
 

@@ -45,7 +45,7 @@ for (let i = 0; i < fotos.length; i++) {
 }
 
 menu.addEventListener("click", function(e) {
-  menu.style.display = "none";
+  this.style.opacity = "0";
 });
 //const element = spans[i];
 // but.addEventListener("click", function(e) {

@@ -32,6 +32,7 @@ body {
 .main-header a {
   flex-basis: 200px;
   display: block;
+  margin: 0 auto;
 
   /* margin-right: 50px; */
 }
@@ -219,7 +220,7 @@ footer .wrap {
   display: none;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 550px) {
   /* ----стиль для главной навигации----- */
   .flex-content {
     display: flex;

@@ -34,7 +34,7 @@ var spans = document.querySelectorAll(".foto span");
 var fotos = document.querySelectorAll(".foto");
 var but = document.querySelector(".menu-hidden");
 var spans = document.querySelectorAll(".foto span");
-
+var menu = document.querySelector(".menu-hidden");
 for (let i = 0; i < fotos.length; i++) {
   fotos[i].addEventListener("click", function(e) {
     console.log(this);
@@ -44,6 +44,9 @@ for (let i = 0; i < fotos.length; i++) {
   });
 }
 
+menu.addEventListener("click", function(e) {
+  menu.style.display = "none";
+});
 //const element = spans[i];
 // but.addEventListener("click", function(e) {
 //   console.log(this);

@@ -279,7 +279,7 @@ footer .wrap {
     /* cursor: pointer; */
     width: inherit;
   }
-
+  /* создаем стили для скрытого меню */
   .main-navigation {
     display: flex;
 

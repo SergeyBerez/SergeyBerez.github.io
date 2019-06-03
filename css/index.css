@@ -199,8 +199,8 @@ footer .wrap {
   justify-content: space-around;
 }
 .foto {
-  flex-basis: 250px;
-
+  flex-basis: 30%;
+  min-width: 150px;
   border-radius: 5px;
   /* background-image: url(../imges/pattern_1335.png); */
   box-sizing: border-box;
@@ -299,7 +299,7 @@ footer .wrap {
   #menu-tag:checked ~ .main-navigation {
     display: flex;
     opacity: 1;
-    z-index: 100;
+    z-index: 1;
     /* height: 150px; */
   }
   .main-navigation li {
@@ -332,11 +332,11 @@ footer .wrap {
     z-index: 1;
     display: block;
 
-    transform: scale(2.5);
+    transform: scale(2);
   }
-  .foto {
+  /* .foto {
     flex-basis: 120px;
-  }
+  } */
 
   .adress-foter {
     font-size: 10px;

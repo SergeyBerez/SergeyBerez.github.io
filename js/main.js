@@ -44,9 +44,9 @@ for (let i = 0; i < fotos.length; i++) {
   });
 }
 
-menu.addEventListener("click", function(e) {
-  this.style.opacity = "0";
-});
+// menu.addEventListener("click", function(e) {
+//   this.style.opacity = "0";
+// });
 //const element = spans[i];
 // but.addEventListener("click", function(e) {
 //   console.log(this);

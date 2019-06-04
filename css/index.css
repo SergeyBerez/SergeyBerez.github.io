@@ -93,12 +93,16 @@ body {
   transition: 0.5s;
   position: relative;
   top: 0px;
+  left: 0px;
+}
+.main-navigation span:nth-child(1) {
+  display: none;
 }
 
 .main-navigation li a {
   color: beige;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.8s;
   /* display: block; */
   font-size: 18px;
   font-family: "Quantico", sans-serif;
@@ -106,8 +110,9 @@ body {
 }
 
 .main-navigation li:hover {
-  position: relative;
-  top: -2px;
+  /* position: relative; */
+  top: 2px;
+  left: 0px;
   background: rgba(46, 45, 45, 0.185);
   border-radius: 5px;
   box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.541);
@@ -272,19 +277,22 @@ footer .wrap {
     position: relative;
     /* background: red; */
   }
+  /* кнопка гамбургер */
   .menu-hidden {
     transition: 0.5s;
     opacity: 1;
     /* background: rgba(219, 210, 82, 0.363); */
     color: aliceblue;
-
-    /* cursor: pointer; */
     width: inherit;
+  }
+  .menu-hidden label {
+    cursor: pointer;
   }
   /* создаем стили для скрытого меню */
   .main-navigation {
     display: flex;
-
+    /* width: 0px;
+    overflow: hidden; */
     opacity: 0;
     /* height: 0px; */
     flex-wrap: wrap;
@@ -296,22 +304,32 @@ footer .wrap {
     list-style-type: none;
     font-family: "Quantico", sans-serif;
     position: absolute;
+    left: -150px;
 
     box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
   }
+
   #menu-tag:checked ~ .main-navigation {
-    display: flex;
+    left: 0;
+
     opacity: 1;
     z-index: 1;
-    /* height: 150px; */
   }
+  .main-navigation span:nth-child(1) {
+    display: block;
+    font-family: "Quantico", sans-serif;
+    color: aliceblue;
+    margin-left: 5px;
+    font-size: 14px;
+  }
+
   .main-navigation li {
     padding: 5px;
-    width: 150px;
+    width: 140px;
     transition: 0.5s;
   }
   .main-navigation li:hover {
-    border-bottom: 1px solid rgb(221, 219, 187);
+    /* border-bottom: 1px solid rgb(221, 219, 187); */
   }
 
   /* крестик стиль для закрывания фото */

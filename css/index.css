@@ -66,17 +66,39 @@ body {
   color: beige;
   margin-bottom: auto;
   margin-left: auto;
-  /* order: 1; */
 }
 /*  кнопку гамбургер div c тегом leble img--- */
-.menu-hidden {
+/* .menu-hidden {
   opacity: 0;
-  transition: opacity 0.5s;
-  /* cursor: pointer; */
-}
-/* скрываем тег инпута */
+  transition: opacity 1.2s; 
+   
+}*/
+
+/* ----------------скрываем тег инпута и крестика закрывающего */
 #menu-tag {
   display: none;
+}
+[for="menu-tag"] {
+  display: none;
+}
+
+/* -------меню гамбургер  три полоски -----*/
+.lable-menu {
+  cursor: pointer;
+  display: block;
+  opacity: 0;
+  height: 25px;
+  opacity: 0.5s;
+  width: 15px;
+
+  background: rgb(76, 77, 75);
+}
+
+.lable-menu::after {
+  display: block;
+  content: "\2630";
+
+  color: rgb(252, 247, 247);
 }
 /* ---------ul главная навигация -------- */
 .main-navigation {
@@ -277,18 +299,33 @@ footer .wrap {
     position: relative;
     /* background: red; */
   }
-  /* кнопка гамбургер */
-  .menu-hidden {
-    transition: 0.5s;
+  /* -------------- стили для кнопка гамбургер------------- */
+  .lable-menu {
     opacity: 1;
-    /* background: rgba(219, 210, 82, 0.363); */
-    color: aliceblue;
-    width: inherit;
+    height: 25px;
+    transition: 0.5s;
+    width: 15px;
+
+    background: rgb(76, 77, 75);
   }
-  .menu-hidden label {
+  /* ----скрываем кнопку гамбургер при нажатии на input + lable */
+  #menu-tag:checked ~ .lable-menu {
+    opacity: 0;
+  }
+  /* -------------скрываем меню действия на клик на иконку гамбургер --- */
+  #menu-tag:checked ~ .main-navigation {
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  /* стиль для крестика  */
+  [for="menu-tag"] {
     cursor: pointer;
+    display: block;
   }
-  /* создаем стили для скрытого меню */
+
+  /* ----------создаем стили для скрытого меню ----------*/
   .main-navigation {
     display: flex;
     /* width: 0px;
@@ -308,28 +345,35 @@ footer .wrap {
 
     box-shadow: 1px 1px 5px rgba(58, 56, 56, 0.39);
   }
-
-  #menu-tag:checked ~ .main-navigation {
-    left: 0;
-
-    opacity: 1;
-    z-index: 1;
-  }
-  .main-navigation span:nth-child(1) {
-    display: block;
-    font-family: "Quantico", sans-serif;
-    color: aliceblue;
-    margin-left: 5px;
-    font-size: 14px;
-  }
-
   .main-navigation li {
     padding: 5px;
     width: 140px;
     transition: 0.5s;
   }
   .main-navigation li:hover {
-    /* border-bottom: 1px solid rgb(221, 219, 187); */
+    top: 0;
+    left: 5px;
+    width: 135px;
+  }
+
+  /*------------------- подписываем главное меню 'меню' */
+  .main-navigation span:nth-child(1) {
+    display: block;
+    font-family: "Quantico", sans-serif;
+    color: rgb(189, 193, 195);
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  /* ------------------ставим кнопку закрытия меню  */
+  .main-navigation span ~ span {
+    display: block;
+    color: rgb(173, 177, 182);
+    position: absolute;
+    top: -2px;
+    left: 130px;
+
+    font-size: 16px;
+    font-weight: bold;
   }
 
   /* крестик стиль для закрывания фото */

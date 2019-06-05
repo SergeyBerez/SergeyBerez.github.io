@@ -35,6 +35,8 @@ var fotos = document.querySelectorAll(".foto");
 var but = document.querySelector(".menu-hidden");
 var spans = document.querySelectorAll(".foto span");
 var menu = document.querySelector(".menu-hidden");
+var span = document.querySelector(".hidden-menu");
+
 for (let i = 0; i < fotos.length; i++) {
   fotos[i].addEventListener("click", function(e) {
     console.log(this);
@@ -43,7 +45,14 @@ for (let i = 0; i < fotos.length; i++) {
     fotos[i].classList.toggle("scale2");
   });
 }
+console.log(span);
 
+var sss = {
+  a: 5,
+  b: 4
+};
+sss.c = 10;
+console.log(sss);
 // menu.addEventListener("click", function(e) {
 //   this.style.opacity = "0";
 // });

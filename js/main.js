@@ -50,7 +50,7 @@ menu.addEventListener("click", function(e) {
   var a = document.querySelector("#menu-tag");
 
   if (!a.checked) {
-    this.style.display = "none";
+    this.style.opacity = "0";
   }
 });
 

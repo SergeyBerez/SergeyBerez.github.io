@@ -32,9 +32,10 @@
 // });
 var spans = document.querySelectorAll(".foto span");
 var fotos = document.querySelectorAll(".foto");
-var but = document.querySelector(".menu-hidden");
+
 var spans = document.querySelectorAll(".foto span");
 var menu = document.querySelector(".menu-hidden");
+
 for (let i = 0; i < fotos.length; i++) {
   fotos[i].addEventListener("click", function(e) {
     console.log(this);
@@ -43,6 +44,15 @@ for (let i = 0; i < fotos.length; i++) {
     fotos[i].classList.toggle("scale2");
   });
 }
+
+console.log(menu);
+menu.addEventListener("click", function(e) {
+  var a = document.querySelector("#menu-tag");
+
+  if (!a.checked) {
+    this.style.display = "none";
+  }
+});
 
 // menu.addEventListener("click", function(e) {
 //   this.style.opacity = "0";

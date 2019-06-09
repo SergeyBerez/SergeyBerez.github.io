@@ -46,13 +46,16 @@ for (let i = 0; i < fotos.length; i++) {
   });
 }
 console.log(span);
+var a = setInterval(say, 500);
+function say() {
+  alert("привет");
+}
+setTimeout(function() {
+  clearInterval(a);
+}, 1000);
 
-var sss = {
-  a: 5,
-  b: 4
-};
-sss.c = 10;
-console.log(sss);
+// clearTimeout(a);
+
 // menu.addEventListener("click", function(e) {
 //   this.style.opacity = "0";
 // });

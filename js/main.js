@@ -45,16 +45,6 @@ for (let i = 0; i < fotos.length; i++) {
     fotos[i].classList.toggle("scale2");
   });
 }
-console.log(span);
-var a = setInterval(say, 500);
-function say() {
-  alert("привет");
-}
-setTimeout(function() {
-  clearInterval(a);
-}, 1000);
-
-// clearTimeout(a);
 
 // menu.addEventListener("click", function(e) {
 //   this.style.opacity = "0";
